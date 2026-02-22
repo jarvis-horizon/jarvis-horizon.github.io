@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 128 128">
+  <rect width="128" height="128" rx="8" fill="#0d0d0d"/>
+  <circle cx="64" cy="48" r="28" fill="#00d4ff" opacity="0.2"/>
+  <circle cx="64" cy="48" r="20" fill="#00d4ff" opacity="0.4"/>
+  <text x="64" y="56" font-family="monospace" font-size="24" font-weight="bold" fill="#00d4ff" text-anchor="middle">J</text>
+  <text x="64" y="98" font-family="monospace" font-size="11" fill="#888" text-anchor="middle">JARVIS</text>
+  <text x="64" y="112" font-family="monospace" font-size="9" fill="#555" text-anchor="middle">⚡ AI TRADER</text>
+</svg>

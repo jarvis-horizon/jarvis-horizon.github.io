@@ -3,7 +3,9 @@
 
 @import "minima";
 
-/* DARK THEME - Nuclear Override */
+/* ================================
+   DARK THEME - Nuclear override
+   ================================ */
 body {
   background-color: #111 !important;
   color: #e0e0e0 !important;
@@ -13,13 +15,13 @@ h1, h2, h3, h4, h5, h6 {
   color: #fff !important;
 }
 
-p, li, dd, dt, span, div, td, th, label {
+p, li, dd, dt, span, div, td, th, label, figcaption {
   color: #ddd;
 }
 
 a { color: #79b8ff !important; }
 a:visited { color: #b392f0 !important; }
-a:hover { color: #fff !important; }
+a:hover { color: #fff !important; text-decoration: underline; }
 
 /* Header */
 .site-header {
@@ -31,6 +33,12 @@ a:hover { color: #fff !important; }
 .site-title, .site-title:visited { color: #fff !important; }
 .site-nav .page-link { color: #ddd !important; }
 .site-nav .page-link:hover { color: #00d4ff !important; }
+.site-nav { background-color: #0d0d0d !important; }
+
+@media screen and (max-width: 600px) {
+  .site-nav { background-color: #1a1a1a !important; border-color: #444 !important; }
+  .site-nav .menu-icon > svg { fill: #ddd !important; }
+}
 
 /* Footer */
 .site-footer {
@@ -38,31 +46,50 @@ a:hover { color: #fff !important; }
   background: #0d0d0d !important;
 }
 
+.footer-col-wrapper { color: #888 !important; }
+.footer-col-wrapper a { color: #00d4ff !important; }
+
 /* Posts */
 .post-meta { color: #999 !important; }
 .post-link { color: #fff !important; font-weight: 500; }
 .post-link:hover { color: #00d4ff !important; }
+.post-link:visited { color: #fff !important; }
 .post-title { color: #fff !important; }
+.post-content h2 { color: #fff !important; }
+.post-content h3 { color: #eee !important; }
+.post-content h4 { color: #ddd !important; }
+.post-content p, .post-content li { color: #ccc !important; }
 
+/* Tables */
 table { color: #ddd !important; border-color: #444 !important; }
-table th { background-color: #1a1a1a !important; color: #fff !important; }
+table th { background-color: #1a1a1a !important; border-color: #444 !important; color: #fff !important; }
 table td { border-color: #444 !important; color: #ddd !important; }
+table tr:nth-child(even) { background-color: #1a1a1a !important; }
 
 blockquote { color: #bbb !important; border-left-color: #555 !important; }
 pre, code { background-color: #1a1a1a !important; border-color: #444 !important; color: #ddd !important; }
+.highlight { background: #1a1a1a !important; }
+.highlighter-rouge .highlight { background: #1a1a1a !important; }
+hr { border-color: #444 !important; }
+strong { color: #fff !important; }
 
-/* Category tags */
+/* ================================
+   Category tags
+   ================================ */
 .category-tag {
-  background: #2a2a3a !important;
+  background: #1a2a3a !important;
   color: #00d4ff !important;
   padding: 2px 8px;
   border-radius: 4px;
   font-size: 0.75em;
+  text-decoration: none !important;
 }
+.category-tag:hover { background: #0a3a4a !important; color: #fff !important; }
+.category-tag:visited { color: #00d4ff !important; }
 
-.category-tag:hover { background: #3a3a4a !important; }
-
-/* Page layout */
+/* ================================
+   Full-width layout
+   ================================ */
 .page-content {
   padding: 0 !important;
 }
@@ -73,11 +100,21 @@ pre, code { background-color: #1a1a1a !important; border-color: #444 !important;
   padding: 0 !important;
 }
 
+/* Non-home pages: centered readable width */
+.page-content .wrapper > article,
+.page-content .wrapper > .post {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 30px;
+}
+
 .site-header .wrapper {
   max-width: 100% !important;
 }
 
-/* Homepage Grid */
+/* ================================
+   Homepage Grid Layout
+   ================================ */
 .home-grid {
   display: flex !important;
 }
@@ -99,10 +136,12 @@ pre, code { background-color: #1a1a1a !important; border-color: #444 !important;
 
 @media (max-width: 768px) {
   .home-grid { flex-direction: column !important; }
-  .home-sidebar { max-width: 100%; border-right: none; border-bottom: 1px solid #2a2a2a; }
+  .home-sidebar { max-width: 100%; min-width: auto; border-right: none; border-bottom: 1px solid #2a2a2a; }
 }
 
-/* Sidebar */
+/* ================================
+   Sidebar
+   ================================ */
 .sidebar-card {
   margin-bottom: 8px;
 }
@@ -133,19 +172,22 @@ pre, code { background-color: #1a1a1a !important; border-color: #444 !important;
   margin: 0 0 6px 0;
 }
 
-.sidebar-card a { color: #6c9 !important; }
-.sidebar-card a:hover { color: #00d4ff !important; }
+.sidebar-card a { color: #00d4ff !important; }
+.sidebar-card a:hover { color: #fff !important; }
 
 .social-link {
   color: #ddd !important;
   text-decoration: none !important;
   font-size: 0.9em;
   padding: 4px 0;
+  transition: color 0.2s;
 }
 
 .social-link:hover { color: #00d4ff !important; }
 
-/* Post Cards */
+/* ================================
+   Post Cards
+   ================================ */
 .post-list-heading {
   font-size: 1.4em;
   margin-bottom: 20px;
@@ -174,6 +216,7 @@ pre, code { background-color: #1a1a1a !important; border-color: #444 !important;
   text-decoration: none !important;
 }
 
+.post-card-title a:visited { color: #fff !important; }
 .post-card-title a:hover { color: #00d4ff !important; }
 
 .post-card-excerpt {
