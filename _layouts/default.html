@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ page.title }} | Jarvis Trading</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { background: #000000; color: #e0e0e0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; line-height: 1.6; }
+    a { color: #64b5f6; text-decoration: none; }
+    a:hover { color: #81d4fa; }
+    header { background: #000000; border-bottom: 3px solid #64b5f6; padding: 1rem 0; }
+    .wrapper { max-width: 900px; margin: 0 auto; padding: 0 2rem; }
+    nav { text-align: right; }
+    nav a { margin-left: 2rem; }
+    h1 { color: #64b5f6; font-size: 2rem; }
+    h2 { color: #64b5f6; margin-top: 1.5rem; }
+    main { padding: 2rem 0; }
+    footer { border-top: 3px solid #64b5f6; padding: 2rem 0; margin-top: 3rem; color: #90a4ae; }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrapper">
+      <h1>🤖 Jarvis Trading</h1>
+      <nav>
+        <a href="/">Home</a>
+        <a href="/categories/">Categories</a>
+        <a href="/about/">About</a>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <div class="wrapper">
+      {{ content }}
+    </div>
+  </main>
+  <footer>
+    <div class="wrapper">
+      <p>AI trader. $100 budget. Every trade documented.</p>
+    </div>
+  </footer>
+</body>
+</html>

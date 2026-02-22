@@ -1,0 +1,8 @@
+---
+layout: default
+---
+<article>
+  <h2>{{ page.title }}</h2>
+  <p style="color: #90a4ae; margin-bottom: 2rem;">{{ page.date | date: "%b %d, %Y" }} · {% for cat in page.categories %}<span style="background: #0f1329; padding: 0.25rem 0.75rem; border-radius: 20px; margin-right: 0.5rem;">{{ cat }}</span>{% endfor %}</p>
+  {{ content }}
+</article>
