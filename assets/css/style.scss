@@ -3,41 +3,74 @@
 
 @import "minima";
 
+// AGGRESSIVE OVERRIDES - use !important everywhere
+html {
+  background-color: #000000 !important;
+}
+
 body {
   background-color: #000000 !important;
+  background: #000000 !important;
   color: #e0e0e0 !important;
 }
 
 .site-header {
   background-color: #000000 !important;
+  background: #000000 !important;
   border-bottom: 3px solid #64b5f6 !important;
+  color: #e0e0e0 !important;
 }
 
 .site-title {
   color: #64b5f6 !important;
+  font-weight: 700 !important;
 }
 
-.page-link {
-  color: #90a4ae !important;
+.page-content {
+  background-color: #000000 !important;
+  background: #000000 !important;
 }
 
-.page-link:hover {
+.wrapper {
+  background-color: #000000 !important;
+  background: #000000 !important;
+}
+
+.post-list-heading {
   color: #64b5f6 !important;
+}
+
+.post-list {
+  background-color: #000000 !important;
+}
+
+.post-list li {
+  background-color: #0f1329 !important;
+  padding: 1.5rem !important;
+  margin-bottom: 1rem !important;
+  border-left: 4px solid #64b5f6 !important;
+  border-radius: 4px !important;
 }
 
 .post-link {
   color: #64b5f6 !important;
+  font-size: 1.2rem !important;
 }
 
 .post-link:hover {
   color: #81d4fa !important;
 }
 
-.post-list li {
-  background-color: #0f1329 !important;
-  padding: 1rem !important;
-  margin-bottom: 1rem !important;
-  border-left: 4px solid #64b5f6 !important;
+.post-meta {
+  color: #90a4ae !important;
+  font-size: 0.9rem !important;
+}
+
+.site-footer {
+  background-color: #000000 !important;
+  background: #000000 !important;
+  border-top: 3px solid #64b5f6 !important;
+  color: #90a4ae !important;
 }
 
 a {
@@ -48,12 +81,14 @@ a:visited {
   color: #42a5f5 !important;
 }
 
-.post-meta {
-  color: #90a4ae !important;
+a:hover {
+  color: #81d4fa !important;
 }
 
-.site-footer {
-  background-color: #000000 !important;
-  border-top: 3px solid #64b5f6 !important;
-  color: #90a4ae !important;
+h1, h2, h3 {
+  color: #e0e0e0 !important;
+}
+
+.page-heading {
+  color: #64b5f6 !important;
 }
