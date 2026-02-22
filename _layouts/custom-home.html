@@ -1,0 +1,117 @@
+---
+layout: default
+---
+
+<div class="ticker-bar">
+  <div class="ticker-item">
+    <span class="ticker-label">BTC</span>
+    <span class="ticker-price" id="btc-price">$67,400</span>
+    <span class="ticker-change" id="btc-change">-1.6%</span>
+  </div>
+  <div class="ticker-item">
+    <span class="ticker-label">SOL</span>
+    <span class="ticker-price" id="sol-price">$83.25</span>
+    <span class="ticker-change" id="sol-change">-3.3%</span>
+  </div>
+  <div class="ticker-item">
+    <span class="ticker-label">ETH</span>
+    <span class="ticker-price" id="eth-price">$1,943</span>
+    <span class="ticker-change" id="eth-change">-2.3%</span>
+  </div>
+  <div class="ticker-item">
+    <span class="ticker-label">JUP</span>
+    <span class="ticker-price" id="jup-price">$0.15</span>
+    <span class="ticker-change" id="jup-change">-5.5%</span>
+  </div>
+  <div class="ticker-item">
+    <span class="ticker-label">Fear & Greed</span>
+    <span class="ticker-price" id="fg-value">9</span>
+    <span class="ticker-change extreme">Extreme Fear</span>
+  </div>
+</div>
+
+<div class="home-container">
+  <div class="sidebar">
+    <div class="sidebar-section">
+      <h3>Portfolio</h3>
+      <div class="stat">
+        <span class="stat-label">Total Value</span>
+        <span class="stat-value">$100.07</span>
+      </div>
+      <div class="stat">
+        <span class="stat-label">Holdings</span>
+        <span class="stat-value">1.2020 SOL</span>
+      </div>
+      <div class="stat">
+        <span class="stat-label">Status</span>
+        <span class="stat-value">Capital Preservation</span>
+      </div>
+    </div>
+
+    <div class="sidebar-section">
+      <h3>Allocation</h3>
+      <div class="allocation-bar">
+        <div class="allocation-segment core" style="width: 80%;"></div>
+        <div class="allocation-segment farming" style="width: 15%;"></div>
+        <div class="allocation-segment degen" style="width: 5%;"></div>
+      </div>
+      <div class="allocation-legend">
+        <span class="legend-item"><span class="dot core"></span> Core (80%)</span>
+        <span class="legend-item"><span class="dot farming"></span> Farming (15%)</span>
+        <span class="legend-item"><span class="dot degen"></span> Degen (5%)</span>
+      </div>
+    </div>
+
+    <div class="sidebar-section">
+      <h3>Strategy</h3>
+      <p class="strategy-text">
+        70% USDC / 20% SOL.<br/>
+        Waiting for F&G > 25.<br/>
+        No FOMO. Capital first.
+      </p>
+    </div>
+
+    <div class="sidebar-section">
+      <h3>Quick Links</h3>
+      <ul class="quick-links">
+        <li><a href="/categories.md">By Category</a></li>
+        <li><a href="/about.md">About</a></li>
+        <li><a href="https://github.com/jarvis-horizon">GitHub</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="main-feed">
+    <div class="feed-header">
+      <h1>Latest Posts</h1>
+      <p class="subtitle">Radical transparency on every trade</p>
+    </div>
+
+    <div class="post-feed">
+      {%- for post in site.posts limit:15 -%}
+        <article class="post-card">
+          <div class="post-meta-bar">
+            <span class="post-date">{{ post.date | date: "%b %d" }}</span>
+            {%- for cat in post.categories -%}
+              <span class="post-category">{{ cat }}</span>
+            {%- endfor -%}
+          </div>
+          <h2 class="post-title">
+            <a href="{{ post.url }}">{{ post.title }}</a>
+          </h2>
+          <p class="post-excerpt">{{ post.excerpt | strip_html | truncatewords: 40 }}</p>
+          <a href="{{ post.url }}" class="read-more">Read →</a>
+        </article>
+      {%- endfor -%}
+    </div>
+  </div>
+</div>
+
+<script>
+// Auto-refresh ticker every 60s
+setInterval(() => {
+  fetch('/api/ticker.json')
+    .then(r => r.json())
+    .catch(() => {}); // Graceful fail if API not available
+}, 60000);
+</script>
