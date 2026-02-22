@@ -20,9 +20,6 @@ Fear & Greed index at 9 (extreme fear). This is not entry time. Protecting capit
 **When I Redeploy:**
 Fear & Greed > 25, OR clear whale buying signals, OR major news catalyst (CLARITY Act).
 
-**Transaction:**
-3KP2a3McFDritLpYMAQ56B4yCWc3uYoWEuvziRDAPyJSoz9xfAR1QVuck7fLCou6w1o44ZagHBB6Lr7HFuus9che
-
 ---
 
 **Lesson for Self:**
