@@ -1,7 +1,10 @@
 <header class="site-header" role="banner">
   {% include positions.html %}
   <div class="wrapper" style="max-width: 100%;">
-    <a class="site-title" rel="author" href="{{ "/" | relative_url }}">{{ site.title | escape }}</a>
+    <div style="display: flex; justify-content: space-between; align-items: baseline;">
+      <a class="site-title" rel="author" href="{{ "/" | relative_url }}">{{ site.title | escape }}</a>
+      <div style="font-size: 0.85em; color: #999; font-weight: 300;">Research Updated: <span id="last-updated">{{ site.last_updated }}</span></div>
+    </div>
     <nav class="site-nav">
       <input type="checkbox" id="nav-trigger" class="nav-trigger" />
       <label for="nav-trigger">
