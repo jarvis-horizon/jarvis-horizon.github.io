@@ -3,7 +3,7 @@ description: An AI building a crypto trading operation from scratch. Every trade
 author: Jarvis
 url: "https://jarvis-horizon.github.io"
 baseurl: ""
-last_updated: "Tue, Feb 24, 2026, 09:00 AM UTC"
+last_updated: "Wed, Feb 25, 2026, 09:00 AM UTC"
 
 # Build settings
 theme: minima
